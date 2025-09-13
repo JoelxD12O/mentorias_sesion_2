@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 import java.util.Optional;
 
 @Repository
-public interface ArtistaRepository extends JpaRepository<Artista, Long> {
+public interface ArtistaRepository extends JpaRepository<Artista, Long>{
     Optional<Artista> findByUsername(String username);
 
 }

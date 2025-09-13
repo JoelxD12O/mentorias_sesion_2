@@ -33,7 +33,7 @@ public class ArtistaController {
 
         Optional<Artista> foundArtistaByUsername = artistaRepository.findByUsername(newArtista.getUsername());
 
-        if (foundArtistaByUsername.isEmpty())
+        if (foundArtistaByUsername.isEmpty())//el artista no existe
             return ResponseEntity.ok(artistaRepository.save(newArtista));
 
         throw new ResourceConflictException("El artista con username " + artista.getUsername() + " ya existe");
